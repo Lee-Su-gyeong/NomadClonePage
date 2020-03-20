@@ -1,0 +1,207 @@
+@import 'config';
+@at-root{
+    $color-background: #fcfcfc;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #fcfcfc;
+    text-align: center;
+}
+@mixin image{
+    height: 200px;
+    width: 360px;
+    border-radius: 25px;
+    background-size: 100%;
+    margin: 0 auto;
+}
+@mixin content{
+    height: 150px;
+    width: 340px;
+    border-radius: 25px;
+    background-color: white;
+    margin-top: -30px;
+    margin: -50px auto 0 auto;
+    box-shadow: 0 10px 21px #e7eeef;
+}
+@mixin transition{
+    transition:all 200ms linear;
+
+}
+@mixin animation{
+    background-size: 110%;
+    margin: -10px auto;
+
+}
+nav{
+    height: 60px;
+    background-color: $color-navback;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-auto-flow: column;
+    line-height: 60px;
+    padding: 0 200px ;
+    font-size: 20px;
+    color:white;
+    div{
+        margin-right: 20px;
+        text-align: center;
+    }
+}
+.signup{
+    width: 105px;
+    height: 35px;
+    border-radius: 20px;
+    background: linear-gradient(to right ,#FF5E00,#FFBB00);
+    line-height: 30px;
+    margin-top: 12.5px;
+}
+.startPage{
+    display: grid;
+    grid-template-rows: 100px 100px;
+    padding:150px 0;
+    box-sizing: border-box;
+    height: 600px;
+    width: 100%;
+    background: {
+        image: url(./배경.jfif);
+        size: contain;
+        
+    }
+    
+}
+.font{
+    color:white;  
+    font-size: 40px;
+    place-self: center;
+    justify-content: center;
+}
+.btn_join{
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+    background: linear-gradient(to right ,#5F00FF,#A566FF);
+    color:white;
+    text-align: center;
+    line-height: 60px;
+    font-size: 18px ;
+    place-self: center;
+
+    &:hover{
+        margin-top: -10px;
+        @include transition;
+    }
+}
+
+.title{
+    padding: 50px 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+.box_Courses{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(6,330px);
+    justify-content: center;
+    margin: 0 174px;
+    padding: 0 10px;
+
+    &>div{
+    margin: 10px;
+    }
+}
+
+.image{
+    @include image;
+    background-image: url(./강아지6.jpg);  
+    &:hover{
+        @include transition;
+        @include animation;
+       
+    }
+
+}
+.image2{
+    @include image;
+    background-image: url(./강아지2.jpg); 
+    &:hover{
+        @include transition;
+        @include animation;
+       
+    }
+}
+.image3{
+    @include image;
+    background-image: url(./강아지3.jpg); 
+    &:hover{
+        @include transition;
+        @include animation;
+    }
+}
+.image4{
+    @include image;
+    background-image: url(./강아지4.jpg); 
+    &:hover{
+        @include transition;
+        @include animation;
+    }
+}
+.image5{
+    @include image;
+    background-image: url(./강아지5.jpg);
+    &:hover{
+        @include transition;
+        @include animation;
+    }
+}
+.image6{
+    @include image;
+    background-image: url(./강아지1.jpg); 
+    &:hover{
+        @include transition;
+        @include animation;
+    }
+}
+.content{
+    @include content; 
+}
+.content_title{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 0px;
+}
+.btn_view{
+    width: 300px;
+    height: 50px;
+    background: linear-gradient(to right ,#FF5E00,#FFBB00);
+    border-radius: 50px;
+    margin: 50px auto;
+    line-height: 50px;
+    text-align: center;
+    color:white;
+    box-shadow: rgba(0,0,0,.15) 0 10px 20px;
+
+    &:hover{
+        margin: 40px auto 60px;
+        @include transition;
+    }
+}
+.footer{
+    background-color: #232A38;
+    margin: 0px;
+}
+.footer1{
+    padding: 40px 0px;
+}
+.footer2{
+    margin: 0px;
+    border-top: 1px solid #bbbbbb;
+    padding: 40px 0px;
+}
+.img{
+    width: 300px;
+}
+.img2{
+    width: 1200px;   
+}
